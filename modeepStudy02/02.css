@@ -1,0 +1,111 @@
+@import "reset.css";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #679cff;
+}
+
+
+.to-do-list {
+    background-color: white;
+    padding: 2rem;
+    width: 450px;
+    min-height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow:  0 4px 15px black(0,0,0,0.3);
+    border-radius: 12px;
+}
+
+.to-do-list header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #193870;
+}
+
+.to-do-list header p {
+    margin: 0.5rem 0 2rem;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* 메인 영역 (목록 + 입력폼) */
+.to-do-list main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0
+}
+
+/* 할 일 목록 */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    flex: 1; /* 위 공간 다 차지 */
+    overflow-y: auto;
+    max-height: 300px
+}
+
+/* 개별 항목 */
+.list li {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 삭제 버튼 */
+.delete-btn {
+    background: #679cff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.delete-btn:hover {
+    background: #497ad5;
+}
+
+/* 입력 폼 */
+.form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto; /* 항상 맨 아래 */
+    flex-shrink: 0
+}
+
+.form input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form button {
+    padding: 0.8rem 1.2rem;
+    background: #679cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+form button:hover {
+    background: #3660ac;
+}
